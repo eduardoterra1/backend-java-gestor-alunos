@@ -1,7 +1,7 @@
 package com.example.alunos.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
-public record AlunoResponse(Long id, String name, String telefone, LocalDateTime dataNscimento, List<MatriculaDTO> matriculas) {
+public record AlunoResponse(Long id, String nome, String telefone, LocalDate dataNascimento, List<MatriculaDTO> matriculas) {
 }
