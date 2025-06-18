@@ -29,6 +29,14 @@ Criar uma API com funcionalidade CRUD para fazer a gestão de cadastro de Alunos
 | dataInclusao    | LocalDateTime |
 | dataAtualizacao | LocalDateTime |
 
+## Design do Codigo 
+Desenvolvimento em arquitertura de camadas
+- Service (Contem toda regra de negocio do projeto)
+- Controller (Mapaamento RestController com base no DTO)
+- DTO - Filtro do que sera exposto em nossos Endpoints
+- Entities - Entidades do projeto (Anunos, Matriculas e BaseEntity heranca)
+- Repository - Repositorios de dados do projeto com JPA Repository
+
 ## 🧩 Funcionalidades da API. 
 - Cadastrar um aluno junto de sua matrícula
 - Listar todos os alunos cadastrados
