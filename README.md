@@ -1,33 +1,100 @@
-# Desafio técnico - Java Spring Boot 
+# Desafio técnico Gesto de Alunos 
 
-- Este desafio foi desenvolvido como um estudo de caso com objetivo de aprimorar as habilidades e conhecimento tecnico na linguagem Java. Utilizando o framework Spring.
+- Este desafio foi desenvolvido como um estudo de caso com objetivo de aprimorar as habilidades e conhecimento tecnico na linguagem Java. Utilizando o framework Spring Boot.
 
 ## Informações sobre o projeto
 Criar uma API com funcionalidade CRUD para fazer a gestão de cadastro de Alunos e vincula-los a uma matricula de um curso. 
 
 ## Entidades
 
-### Entity Aluno (1 ---> *)
+
+<div style="display: flex; gap: 50px;">
+
+<!-- Aluno -->
+<div>
+<h3>🎓 Entity: Aluno (1 → *)</h3>
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th>Variável</th>
+      <th>Tipo</th>
+    </tr>
+  </thead>
+  <tr>
+    <td><b>ID</b></td>
+    <td>Long (PK)</td>
+  </tr>
+  <tr>
+    <td>nome</td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>dataNascimento</td>
+    <td>LocalDate</td>
+  </tr>
+  <tr>
+    <td>telefone</td>
+    <td>String</td>
+  </tr>
+</table>
+</div>
+
+<!-- Matricula -->
+<div>
+<h3>📘 Entity: Matricula (* → 1)</h3>
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th>Variável</th>
+      <th>Tipo</th>
+    </tr>
+  </thead>
+  <tr>
+    <td><b>ID</b></td>
+    <td>Long (PK)</td>
+  </tr>
+  <tr>
+    <td>nomeCurso</td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td>dataInicio</td>
+    <td>LocalDate</td>
+  </tr>
+  <tr>
+    <td>aluno_id</td>
+    <td>Long (FK)</td>
+  </tr>
+</table>
+</div>
+
+</div>
+
+
+
+
+
+### Entity Aluno (1 -> *)                
 | Variavel  | Tipo  | 
 | ------------- |:-------------:|
-| ID      | Long PK    |
-| nome      | String     |
-| dataNascimento      | LocalDate     |
+| ID            | Long PK    |
+| nome          | String     |
+| dataNascimento| LocalDate  |
 | telefone      | String     |
 
-### Entity Matricula (* ---> 1)
+### Entity Matricula (* -> 1)
 | Variavel | Tipo | 
 | ------------- |:-------------:|
-| ID      | Long PK    |
+| ID            | Long PK    |
 | nomeCurso     | String     |
-| dataInicio      | LocalDate     |
-| aluno_id      | Long FK     |
+| dataInicio    | LocalDate  |
+| aluno_id      | Long FK    |
 
 ### Entity BaseEntity (Classe de herança)
 | Left columns  | Right columns | 
 | ------------- |:-------------:|
-| dataInclusao      | LocalDateTime     |
-| dataAtualizacao      | LocalDateTime   |
+| dataInclusao    | LocalDateTime |
+| dataAtualizacao | LocalDateTime |
 
 ## Funcionalidades da API. 
 - Cadastrar um aluno junto de sua matrícula
