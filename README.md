@@ -1,21 +1,21 @@
-# 🔙🔚 Desafio técnico Gestor de Alunos 
+# 🔙🔚 Desafio técnico Gestor de Alunos. 
 
-- Este desafio foi desenvolvido como um estudo de caso, com objetivo de aprimoramento de habilidades e tambem aprofundar o conhecimento tecnico na linguagem Java, utilizando o framework Spring Boot.
+- Este desafio foi desenvolvido como um estudo de caso, com objetivo de aprimoramento de habilidades e também aprofundar o conhecimento técnico na linguagem Java, utilizando o framework Spring Boot.
 
-## 📚 Informações sobre o projeto
-Criar uma API com funcionalidade CRUD para fazer a gestão de cadastro de Alunos e vincula-los a uma matricula de um curso. 
+## 📚 Informações sobre o projeto.
+Criar uma API com funcionalidade CRUD para fazer a gestão de cadastro de Alunos e associá-los a uma matrícula de um curso. 
 
 ## ✳ Entidades
 
-### Entity Aluno (1 -> *)                
-| Variavel  | Tipo  | 
+### Entity Aluno (1 → *)                
+| Variável  | Tipo  | 
 | ------------- |:-------------:|
 | ID            | Long PK    |
 | nome          | String     |
 | dataNascimento| LocalDate  |
 | telefone      | String     |
 
-### Entity Matricula (* -> 1)
+### Entity Matricula (* → 1)
 | Variavel | Tipo | 
 | ------------- |:-------------:|
 | ID            | Long PK    |
@@ -30,33 +30,33 @@ Criar uma API com funcionalidade CRUD para fazer a gestão de cadastro de Alunos
 | dataAtualizacao | LocalDateTime |
 
 ## 🗂 Design do Codigo 
-Desenvolvimento em arquitertura de camadas
-- Service (Contem toda regra de negocio do projeto)
+Desenvolvimento em arquitetura de camadas.
+- Service (Contem toda regra de negócio do projeto)
 - Controller (Mapeamento da classe RestController com base nos DTOs)
-- DTO  (Somente o que sera exposto em nossos Endpoints)
+- DTO  (Somente o que será exposto em nossos Endpoints)
 - Entities (Entidades do projeto (Alunos, Matriculas e BaseEntity)
-- Repository (Repositorios de dados do projeto com JPA Repository)
+- Repository (Repositórios de dados do projeto com JPA Repository)
 
 ## 🧩 Funcionalidades da API. 
-- Cadastrar um aluno junto de sua matrícula
-- Listar todos os alunos cadastrados
-- Listar todas as matrºiccula de um aluno a partir de seu ID
+- Cadastrar um aluno junto de sua matrícula.
+- Listar todos os alunos cadastrados.
+- Listar todas as matrículas de um aluno a partir de seu ID.
 - Atualizar os dados cadastrais de um aluno (e suas matrículas)
 - Remover um aluno (e suas matrículas)
 
 ## 🚀 Tecnologias Utilizadas
-- JAVA 17
-- Spring Boot
-- Spring DATA JPA
-- H2 DATABASE (para testes locais)
-- Maven
-- Rest Client (arquivo .http para teste rápidos)
+- JAVA 17.
+- Spring Boot.
+- Spring DATA JPA.
+- H2 DATABASE (para testes locais).
+- Maven.
+- Rest Client (arquivo .http para testes rápidos).
 
 ## 🛠️ Configurações
 
 ### Banco de Dados
 
-- **Testes**: Banco em memória H2
+- **Testes**: Banco em memória H2.
 
 ## ▶️ Como Executar
 
@@ -74,7 +74,7 @@ mvn spring-boot:run
 
 ## 🔗 Endpoints
 
-### ➕ Criar Aluno
+### ➕ Criar Aluno.
 
 **POST** `/alunos`
 
@@ -100,12 +100,12 @@ json
 }
 ```
 
-📄 Listar Todos os Alunos
+📄 Listar Todos os Alunos.
 GET /alunos
 
 Retorna uma lista de todos os alunos cadastrados.
 
-Resposta 200 OK
+Resposta 200 OK.
 ```
 [
   {
@@ -123,12 +123,12 @@ Resposta 200 OK
 ]
 ```
 
-📘 Listar Matrículas de um Aluno
+📘 Listar Matrículas de um Aluno.
 GET /alunos/{id}/matriculas
 
 Retorna a lista de matrículas de um aluno específico.
 
-Parâmetros de Rota
+Parâmetros de Rota.
 id (Long): ID do aluno
 
 Resposta 200 OK
@@ -183,5 +183,4 @@ id (Long): ID do aluno
 Resposta 204 No Content
 Nenhum corpo de resposta.
 ```
-
 
