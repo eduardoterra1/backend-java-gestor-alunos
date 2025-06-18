@@ -18,15 +18,13 @@ import com.example.alunos.repository.AlunoRepository;
 @Service
 public class AlunoService {
 
-    private final MatriculaRepository matriculaRepository;
     
     private final AlunoRepository alunoRepository;
     private final AlunoMapper alunoMapper;
 
-    public AlunoService(AlunoRepository alunoRepository, AlunoMapper alunoMapper, MatriculaRepository matriculaRepository){
+    public AlunoService(AlunoRepository alunoRepository, AlunoMapper alunoMapper){
         this.alunoRepository = alunoRepository;
         this.alunoMapper = alunoMapper;
-        this.matriculaRepository = matriculaRepository;
     }
 
     public AlunoResponse salvar(AlunoRequest request){

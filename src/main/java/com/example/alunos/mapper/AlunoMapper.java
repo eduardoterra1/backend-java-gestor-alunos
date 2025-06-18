@@ -14,18 +14,17 @@ import com.example.alunos.entity.Matricula;
 public class AlunoMapper {
     
     public Aluno toEntity (AlunoRequest request) {
-
         Aluno aluno = new Aluno();
         aluno.setNome(request.nome());
         aluno.setDataNascimento(request.dataNascimento());
         aluno.setTelefone(request.telefone());
-        List<Matricula> matriculas = request.matriculas().stream().map(m -> {
+        List<Matricula> matriculas = request.matriculas().stream().map(m -> {       
             Matricula matricula = new Matricula();
             matricula.setCodigoMatricula(m.codigoMatricula());
             matricula.setDataInicio(m.dataInicio());
             matricula.setNomeCurso(m.nomeCurso());
+            matricula.setAluno(aluno);
             return matricula;
-
         }).toList();
         aluno.setMatriculas(matriculas);
         return aluno;

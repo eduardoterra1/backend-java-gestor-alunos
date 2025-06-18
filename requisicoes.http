@@ -1,0 +1,26 @@
+### POST 
+POST http://localhost:8080/alunos 
+Content-Type: application/json
+
+{
+    "nome" : "Eduardo Augusto Terra",
+    "telefone" : "1597979797",
+    "dataNascimento" : "1996-05-24",
+    "matriculas" : [
+        {
+            "codigoMatricula": "123",
+            "nomeCurso": "Computação",
+            "dataInicio": "2025-06-18"
+        }
+    ]
+}
+
+###
+
+### Listar todos os alunos 
+GET http://localhost:8080/alunos 
+
+###
+
+### Listar aluno buscando pelo ID
+GET http://localhost:8080/alunos/1/matriculas
