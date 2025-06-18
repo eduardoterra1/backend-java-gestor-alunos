@@ -62,6 +62,7 @@ mvn clean install
 
 # Rodar o projeto
 mvn spring-boot:run
+```
 
 ## 🔗 Endpoints
 
