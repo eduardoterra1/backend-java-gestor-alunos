@@ -8,6 +8,8 @@ import com.example.alunos.dto.AlunoResponse;
 import com.example.alunos.dto.MatriculaDTO;
 import com.example.alunos.service.AlunoService;
 
+import jakarta.validation.Valid;
+
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -34,7 +36,7 @@ public class AlunoController {
     }
 
     @PostMapping
-    public ResponseEntity<AlunoResponse> criar(@RequestBody AlunoRequest request) {
+    public ResponseEntity<AlunoResponse> criar(@Valid @RequestBody AlunoRequest request) {
        return ResponseEntity.status(HttpStatus.CREATED).body(alunoService.salvar(request));
     }
 
