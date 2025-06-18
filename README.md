@@ -1,11 +1,11 @@
-# Desafio técnico Gesto de Alunos 
+# 🔙🔚 Desafio técnico Gestor de Alunos 
 
-- Este desafio foi desenvolvido como um estudo de caso com objetivo de aprimorar as habilidades e conhecimento tecnico na linguagem Java. Utilizando o framework Spring Boot.
+- Este desafio foi desenvolvido como um estudo de caso, com objetivo de aprimoramento de habilidades e tambem aprofundar o conhecimento tecnico na linguagem Java, utilizando o framework Spring Boot.
 
-## Informações sobre o projeto
+## 📚 Informações sobre o projeto
 Criar uma API com funcionalidade CRUD para fazer a gestão de cadastro de Alunos e vincula-los a uma matricula de um curso. 
 
-## Entidades
+## ✳ Entidades
 
 ### Entity Aluno (1 -> *)                
 | Variavel  | Tipo  | 
@@ -29,7 +29,7 @@ Criar uma API com funcionalidade CRUD para fazer a gestão de cadastro de Alunos
 | dataInclusao    | LocalDateTime |
 | dataAtualizacao | LocalDateTime |
 
-## Funcionalidades da API. 
+## 🧩 Funcionalidades da API. 
 - Cadastrar um aluno junto de sua matrícula
 - Listar todos os alunos cadastrados
 - Listar todas as matrºiccula de um aluno a partir de seu ID
